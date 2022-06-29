@@ -3,6 +3,18 @@ import sys
 import os
 import matplotlib.pyplot as plt
 
+golden_ratio = 1.61803
+
+def number_of_terms(n):
+    result = 1
+    i = 1
+    while result < n:
+        result =i*0.2090
+        if result >= 999:
+            print(result, i)
+        i+=1
+    return i-4
+
 def fibonacci_vec(n):
     F_0 = np.array([[1],[1]])
     A = np.array([[1, 1],[1, 0]])
@@ -33,7 +45,7 @@ def fibonacci_sequence(n):
 
     return fib_sequence
 
-if __name__=="__main__":
+def plot_len():
     plt.rc('grid', linestyle="-", color='black')
     x_val =fibonacci_sequence(80)
     print(x_val)
@@ -47,3 +59,6 @@ if __name__=="__main__":
     plt.grid(axis='both', color='0.95')
     plt.show()
     fig.savefig("./Week2/static/fibterms")
+
+if __name__=="__main__":
+    print(number_of_terms(3))
