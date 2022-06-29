@@ -1,0 +1,8 @@
+# created by virtualenv automatically
+*.cfg
+*.ini
+.vscode
+.mypy_cache
+*.idea
+*.exe
+Lib/
