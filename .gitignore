@@ -6,3 +6,4 @@
 *.idea
 *.exe
 Lib/
+__pycache__
